@@ -1,3 +1,7 @@
+function d() {
+  var d = '4';
+}
+
 function a() {
   var a = '1';
   function b() {
@@ -5,12 +9,12 @@ function a() {
     function c() {
       var c = '3';
       // this
-      // console.log(this)
+      console.log(this)
       console.log(a);
       console.log(b);
       console.log(c);
     }
-    c();
+    c.apply(d);
   }
   b();
 }
